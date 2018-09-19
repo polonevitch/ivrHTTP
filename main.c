@@ -20,14 +20,14 @@ int main()
   int code;
 
   printf("POST test\n");
-  code = request(client, JSON, POST, POST_URL, REQUEST_DAT, resp, sizeof(resp), err, sizeof(err));
+  code = httpRequest(client, JSON, POST, POST_URL, REQUEST_DAT, resp, sizeof(resp), err, sizeof(err));
   if(code==200)
     printf("%s\n", resp);
   else
     printf("%s RET = %d\n", resp, code);
 
   printf("GET test\n");
-  code = request(client, NO_BODY, GET, GET_URL, "", resp, sizeof(resp), err, sizeof(err));
+  code = httpRequest(client, NO_BODY, GET, GET_URL, "", resp, sizeof(resp), err, sizeof(err));
   if(code==200)
     printf("%s\n", resp);
   else

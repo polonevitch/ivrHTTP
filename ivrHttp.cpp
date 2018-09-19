@@ -33,7 +33,7 @@ void destroyClientObj( void *clientObj )
   delete(reinterpret_cast<IHttpClient*>(clientObj));
 }
 
-int request(void * obj, 
+int httpRequest(void * obj, 
             HTTPContentType contentType, 
             HTTPMethodType methodType, 
             const char * url, 

@@ -108,7 +108,7 @@ extern "C"
 void* getClientObj();
 void* getClientMoc();
 void destroyClientObj( void *clientObj );
-int request( void* clientObj,
+int httpRequest( void* clientObj,
              HTTPContentType contentType,
              HTTPMethodType methodType,
              const char *url,
